@@ -31,3 +31,4 @@
 /server/config/database.yml
 
 /server/config/database.yml
+server/.rbenv-vars
