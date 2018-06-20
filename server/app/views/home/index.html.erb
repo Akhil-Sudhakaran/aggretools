@@ -1,0 +1,14 @@
+<h1>Simple Rails App</h1>
+
+<p>This app is used as a playground for various Rails-related things.</p>
+
+<h2>Some Posts</h2>
+<ul class="posts">
+<% @posts.each do |post| %>
+  <li class="post">
+    <strong><%= post.title %></strong>
+    <p><%= post.body %></p>
+  </li>
+<% end %>
+</ul>
+
