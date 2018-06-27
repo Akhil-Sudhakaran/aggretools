@@ -3,20 +3,20 @@ lock "~> 3.11.0"
 
 set :application, "aggretools"
 set :repo_url, "https://github.com/seven-samurai-partners/aggretools/trunk/server"
-set :branch, :master
+set :branch, 'master'
 
-set deploy_to:, '/home/aggreuser/aggretools'
+set deploy_to:, '/home/deploy/aggretools'
 
-set :pty, true
-set :linked_files, %w{config/database.yml config/application.yml}
+
+set :linked_files, %w{config/database.yml config/secrets.yml config/application.rb config/boot.rb}
+
+set :rails_env, 'production'
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
-# Uncomment the following to require manually verifying the host key before first deploy.
-# set :ssh_options, verify_host_key: :secure
+set :keep_releases, 2
+set :rbenv_type, :user
+set :rbenv_ruby, '2.5.0'
 
-set :keep_releases, 5
-set :rvm_type, :user
-set :rvm_ruby_version, 'ruby 2.5.0'
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
