@@ -5,7 +5,7 @@ set :application, "aggretools"
 set :repo_url, "https://github.com/seven-samurai-partners/aggretools/trunk/server"
 set :branch, 'master'
 
-set deploy_to:, '/home/deploy/aggretools'
+set deploy_to: '/home/deploy/aggretools'
 
 
 set :linked_files, %w{config/database.yml config/secrets.yml config/application.rb config/boot.rb}
