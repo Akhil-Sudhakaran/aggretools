@@ -2,7 +2,7 @@
 lock "~> 3.11.0"
 
 set :application, "aggretools"
-set :repo_url, "https://github.com/seven-samurai-partners/aggretools"
+set :repo_url, "https://github.com/Akhil-Sudhakaran/aggretools.git/"
 set :repo_tree, 'server'
 set :branch, 'master'
 
